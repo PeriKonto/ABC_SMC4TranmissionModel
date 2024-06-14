@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:complexType name="age.table">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="age.class" type="age.class"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="age.class">
+      <xs:attribute name="age.limit" use="required" type="nonnegint200"/>
+  </xs:complexType>
+  <xs:complexType name="population.table">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="age.group" type="age.group"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="age.group">
+      <xs:attribute name="age.limit" use="required" type="nonnegint200"/>
+      <xs:attribute name="n.males" use="required" type="nonnegativeinteger"/>
+      <xs:attribute name="n.females" use="required" type="nonnegativeinteger"/>
+  </xs:complexType>
+  <xs:complexType name="functional.relationship">
+      <xs:attribute name="fun.nr" use="required" type="function.nrs"/>
+      <xs:attribute name="a" use="required" type="xs:double"/>
+      <xs:attribute name="b" use="optional" type="xs:double" default="0"/>
+      <xs:attribute name="c" use="optional" type="xs:double" default="0"/>
+  </xs:complexType>
+  <xs:complexType name="MM.kinetics">
+    <xs:sequence>
+      <xs:element name="a" type="continuous.distribution"/>
+      <xs:element name="b" type="continuous.distribution"/>
+      <xs:element name="c" type="continuous.distribution"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="continuous.distribution">
+    <xs:attribute name="dist.nr" use="required" type="continuous.distribution.nrs"/>
+    <xs:attribute name="offset" use="optional" type="xs:double" default="0"/>
+    <xs:attribute name="min" use="optional" type="xs:double" default="-1e6"/>
+    <xs:attribute name="max" use="optional" type="xs:double" default="1e6"/>
+    <xs:attribute name="mean" use="optional" type="xs:double" default="1"/>
+    <xs:attribute name="p1" use="optional" type="xs:double" default="0"/>
+    <xs:attribute name="p2" use="optional" type="xs:double" default="0"/>
+  </xs:complexType>
+  <xs:complexType name="discrete.distribution">
+    <xs:attribute name="dist.nr" use="required" type="continuous.distribution.nrs"/>
+    <xs:attribute name="mean" use="optional" type="xs:double" default="1"/>
+    <xs:attribute name="p1" use="optional" type="xs:double" default="0"/>
+    <xs:attribute name="p2" use="optional" type="xs:double" default="0"/>
+  </xs:complexType>
+  <xs:simpleType name="function.nrs">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='5'/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="continuous.distribution.nrs">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='7'/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="discrete.distribution.nrs">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='6'/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="nonnegint200">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='200'/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nonnegativeinteger">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='2000000000'/>
+    </xs:restriction>
+  </xs:simpleType>
+   <xs:simpleType name="deltahours">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='-12'/>
+      <xs:maxInclusive value='12'/>
+    </xs:restriction>
+  </xs:simpleType>
+ <xs:simpleType name="monthnr">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='12'/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yearnr">
+    <xs:restriction base='xs:integer'>
+      <xs:minInclusive value='1700'/>
+      <xs:maxInclusive value='2200'/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="modeltype">
+    <xs:restriction base='xs:string'>
+      <xs:enumeration value="onchosim"/>
+      <xs:enumeration value="lymfasim"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <xs:complexType name="ymdelayeff">
+    <xs:attribute name="year" use="required" type="yearnr" />
+    <xs:attribute name="month" use="optional" type="monthnr" default="0"/>
+    <xs:attribute name="delay" use="optional" type="deltahours" default="0"/>
+    <xs:attribute name="effectivity" use="required" type="nonnegdouble1"/>
+    <xs:attribute name="fraction.excluded" use="optional" type="nonnegdouble1" default="0"/>
+  </xs:complexType> 
+  <xs:complexType name="ym">
+    <xs:attribute name="year" use="required" type="yearnr" />
+    <xs:attribute name="month" use="optional" type="monthnr" default="0"/>
+    <xs:attribute name="delay" use="optional" type="deltahours" default="-5"/>
+  </xs:complexType>
+  <xs:complexType name="intervalym">
+    <xs:attribute name="years" use="optional" type="nonnegint200" default="0"/>
+    <xs:attribute name="months" use="optional" type="nonnegint200" default="0"/>
+  </xs:complexType>
+  <xs:simpleType name="nonnegdouble1">
+    <xs:restriction base='xs:double'>
+      <xs:minInclusive value='0.0'/>
+      <xs:maxInclusive value='1.0'/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nonnegdouble">
+    <xs:restriction base='xs:double'>
+      <xs:minInclusive value='0.0'/>
+      <xs:maxInclusive value='1e100'/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="covmodel">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value='0'/>
+      <xs:maxInclusive value='2'/>
+    </xs:restriction>
+  </xs:simpleType>  
+  <xs:element name="wormsim.inputfile">
+  <xs:complexType>
+    <xs:sequence>
+        <xs:element ref="simulation"/>
+        <xs:element ref="demography"/>
+        <xs:element ref="blindness"/>
+        <xs:element ref="exposure.and.contribution"/>
+	<xs:element ref="anti.L3.immunity"/>
+	<xs:element ref="anti.Worm.immunity"/>
+        <xs:element ref="worm"/>
+        <xs:element ref="fly" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="mass.treatments"/>
+        <xs:element ref="vector.control"/>
+    </xs:sequence>
+    <xs:attribute name="model"  type="modeltype" use="required"/>
+  </xs:complexType>
+  </xs:element>  
+  <xs:element name="simulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="surveillance"/>
+        <xs:element name="standard.population" type="population.table"/>
+      </xs:sequence>
+      <xs:attribute name="start.year" default="1875" type="yearnr"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="surveillance">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="periodic.surveys" minOccurs="0" maxOccurs="1"/>
+    <xs:element ref="extra.surveys" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="age.classes" type="age.table"/>
+    </xs:sequence>
+    <xs:attribute name="nr.skin-snips" use="required" type="nonnegint200"/>
+    <xs:attribute name="skin-snip.categories" default="0.5,1,2,4,8,16,32,64,128,256,512,1e6" type="xs:string"/>
+ </xs:complexType>
+  </xs:element>  
+
+    <xs:element name="periodic.surveys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="start" minOccurs="1" maxOccurs="1" type="ym"/>
+        <xs:element name="stop" minOccurs="1" maxOccurs="1" type="ym"/>
+        <xs:element name="interval" minOccurs="1" maxOccurs="1" type="intervalym"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extra.surveys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="survey" minOccurs="0" maxOccurs="unbounded" type="ym"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vector.control">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="moment" minOccurs="0" maxOccurs="unbounded" type="ymdelayeff"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mass.treatments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="treatment.effect.variability" type="continuous.distribution"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mass.treatment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mass.treatment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="treatment.rounds"/>
+        <xs:element ref="compliance"/>
+        <xs:element ref="treatment.effects"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="treatment.effects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fraction.mf.surviving" type="continuous.distribution"/>
+      </xs:sequence>
+      <xs:attribute name="permanent.reduction.mf-production" use="required" type="nonnegdouble1"/>
+      <xs:attribute name="period.of.recovery" use="required" type="nonnegdouble"/>
+      <xs:attribute name="shape.parameter.recovery.function" use="required" type="nonnegdouble"/>
+      <xs:attribute name="fraction.killed" use="required" type="nonnegdouble1"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="treatment.rounds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="treatment.round"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="treatment.round">
+    <xs:complexType>
+      <xs:attribute name="year" use="required" type="yearnr"/>
+      <xs:attribute name="month" use="required" type="monthnr"/>
+      <xs:attribute name="delay" use="optional" type="deltahours" default="-4"/>
+      <xs:attribute name="coverage" use="required" type="nonnegdouble1"/>
+      <xs:attribute name="fraction.excluded" use="optional" type="nonnegdouble1" default="0"/>
+    </xs:complexType>
+  </xs:element>  
+  <xs:element name="compliance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="age.and.sex.specific.compliance"/>
+      </xs:sequence>
+      <xs:attribute name="fraction.malabsorption" default="0" type="nonnegdouble1"  />
+      <xs:attribute name="compliance.model"  default="0" type="covmodel"/>
+      <xs:attribute name="test.first" default="false" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="age.and.sex.specific.compliance">
+    <xs:complexType>
+      <xs:attribute name="age.limit" use="required" type="nonnegint200"/>
+      <xs:attribute name="male.compliance" use="required" type="nonnegdouble1"/>
+      <xs:attribute name="female.compliance" use="required" type="nonnegdouble1"/>
+    </xs:complexType>
+  </xs:element>  
+  <xs:element name="fly" >
+      <xs:complexType>
+        <xs:sequence>
+        <xs:element ref="L1-uptake"/>
+        <xs:element ref="monthly.biting.rates"/>
+        </xs:sequence>
+        <xs:attribute name="transmission.probability" use="required" type="nonnegdouble"/>
+        <xs:attribute name="success.ratio" use="required" type="nonnegdouble"/>
+      </xs:complexType>
+    </xs:element>
+  <xs:element name="L1-uptake" type="functional.relationship"/>
+  <xs:element name="monthly.biting.rates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="mbr"/>
+      </xs:sequence>
+      <xs:attribute name="relative.biting.rate" use="required" type="nonnegdouble1"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mbr">
+    <xs:complexType>
+      <xs:attribute name="month" use="required" type="monthnr"/>
+      <xs:attribute name="rate" use="required" type="nonnegdouble"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="worm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lifespan"/>
+        <xs:element ref="prepatent.period"/>
+        <xs:element ref="mating"/>
+        <xs:element ref="age.dependent.mf-production"/>
+        <xs:choice>
+        <xs:element ref="skin.mf-density.per.worm"/>
+        <xs:element ref="alt.skin.mf-density.per.worm"/>
+        </xs:choice>
+        <xs:element ref="skin.dispersal"/> 
+        <xs:element ref="skin-snip.variability"/>
+      </xs:sequence>
+      <xs:attribute name="mf-lifespan" use="optional" type="nonnegativeinteger" default="9"/>
+      <xs:attribute name="mf-survival" use="optional" type="nonnegdouble" default="0.9"/>
+      <xs:attribute name="monthly.event.delay" use="optional" type="deltahours" default="-1"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lifespan" type="continuous.distribution"/>
+  <xs:element name="prepatent.period" type="continuous.distribution"/>
+  <xs:element name="skin.mf-density.per.worm" type="functional.relationship"/>
+  <xs:element name="alt.skin.mf-density.per.worm" type="MM.kinetics"/>
+  <xs:element name="skin.dispersal" type="continuous.distribution"/>
+  <xs:element name="skin-snip.variability" type="discrete.distribution"/>
+  <xs:element name="mating">
+  <xs:complexType>
+    <xs:attribute name="sex.ratio" use="optional" type="nonnegdouble" default="1"/>
+    <xs:attribute name="cycle" use="required" type="nonnegdouble"/>
+    <xs:attribute name="male.potential" use="required" type="xs:double"/>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="age.dependent.mf-production">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="mf-production"/>
+      </xs:sequence>
+      <xs:attribute name="labda" default="0.0" type="nonnegdouble"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mf-production">
+    <xs:complexType>
+      <xs:attribute name="age.limit" use="required" type="nonnegdouble"/>
+      <xs:attribute name="production" use="required" type="nonnegdouble"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="blindness">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="treshold"/>
+        <xs:element ref="pct-life-expectancy-reduction"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="treshold" type="continuous.distribution"/>
+  <xs:element name="pct-life-expectancy-reduction" type="continuous.distribution"/>
+  <xs:element name="exposure.and.contribution">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="environment" type="environment.definition" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="external.foi"/>
+        <xs:element ref="male"/>
+        <xs:element ref="female"/>
+        <xs:element ref="exposure.interventions"/>
+        <xs:element ref="contribution.interventions"/>
+        <xs:element ref="compliance"/>       
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="environment.definition">
+      <xs:attribute name="zeta" use="required" type="nonnegdouble"/>
+      <xs:attribute name="psi" use="required" type="nonnegdouble1"/>
+  </xs:complexType>
+    <xs:element name="external.foi">
+  <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="start" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="start">
+  <xs:complexType>
+    <xs:attribute name="year" use="required" type="yearnr"/>
+    <xs:attribute name="month" default="0"   type="monthnr"/>
+    <xs:attribute name="foi" use="required" type="nonnegdouble"/>
+    <xs:attribute name="exclusive" use="required" type="xs:boolean"/>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="male">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="exposure.function" type="functional.relationship" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="age.dependent.exposure" type="age.dependency.table" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="exposure.index" type="continuous.distribution"/>
+        <xs:element name="contribution.function" type="functional.relationship" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="age.dependent.contribution" type="age.dependency.table" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="contribution.index" type="continuous.distribution" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="female">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="exposure.function" type="functional.relationship" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="age.dependent.exposure" type="age.dependency.table" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="exposure.index" type="continuous.distribution"/>
+        <xs:element name="contribution.function" type="functional.relationship" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="age.dependent.contribution" type="age.dependency.table" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="contribution.index" type="continuous.distribution" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exposure.interventions">
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element name="moment" minOccurs="0" maxOccurs="unbounded" type="ymdelayeff"/>
+          </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+  <xs:element name="contribution.interventions">
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element name="moment" minOccurs="0" maxOccurs="unbounded" type="ymdelayeff"/>
+          </xs:sequence>
+      </xs:complexType> 
+  </xs:element>
+    <xs:complexType name="age.dependency.table">
+      <xs:sequence>
+        <xs:element name="age.dependency" maxOccurs="unbounded">
+            <xs:complexType>
+                <xs:attribute name="age" use="required" type="nonnegdouble"/>
+                <xs:attribute name="x" use="required" type="nonnegdouble"/>
+            </xs:complexType>
+        </xs:element>            
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="initial.foi">
+  <xs:complexType>
+    <xs:attribute name="duration" use="required" type="nonnegdouble"/>
+    <xs:attribute name="foi" use="required" type="nonnegdouble"/>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="anti.L3.immunity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="male">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="immunity.index"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="female">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="immunity.index"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="TH.L3" use="required" type="nonnegdouble"/>
+      <xs:attribute name="gamma" use="required" type="nonnegdouble"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="anti.Worm.immunity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="male">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="immunity.index"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="female">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="immunity.index"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="TH.W" use="required" type="nonnegdouble"/>
+      <xs:attribute name="gamma" use="required" type="nonnegdouble"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="immunity.index" type="continuous.distribution"/>
+  <xs:element name="demography">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="the.reaper"/>
+        <xs:element ref="life.table"/>
+        <xs:element ref="fertility.table"/>
+        <xs:element name="initial.population" type="population.table"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="the.reaper">
+    <xs:complexType>
+      <xs:attribute name="max.population.size" use="optional" type="nonnegativeinteger" default="440"/>
+      <xs:attribute name="reap" use="optional" type="nonnegdouble1" default="0.1	"/>
+      <xs:attribute name="delay" use="optional" type="deltahours" default="-2"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="life.table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="survival"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="survival">
+    <xs:complexType>
+      <xs:attribute name="age.limit" use="required" type="nonnegint200"/>
+      <xs:attribute name="male.survival" use="required" type="nonnegdouble1"/>
+      <xs:attribute name="female.survival" use="required" type="nonnegdouble1"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fertility.table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="fertility"/>
+      </xs:sequence>
+      <xs:attribute name="fraction.male.newborns"  type="nonnegdouble1" default="0.50"/>
+      <xs:attribute name="delay"  type="deltahours" default="-3"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fertility">
+    <xs:complexType>
+      <xs:attribute name="age.limit" use="required"  type="nonnegint200"/>
+      <xs:attribute name="birth.rate" use="required" type="nonnegdouble1"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,178 @@
+Oct 15, 2017 9:41:20 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2017 9:41:20 PM Onchosim2.Wormsim showMessage
+INFO: Sun Oct 15 21:41:20 BST 2017
+Oct 15, 2017 9:41:21 PM Onchosim2.Wormsim doOneRun
+INFO: running	par_set_1.xml	seed= 57586181
+Oct 15, 2017 9:41:21 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:25 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:33 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:35 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:41:36 PM events.Event schedule_dt
+WARNING: increased dt to MINTIMESTEP
+Oct 15, 2017 9:42:22 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2017 9:42:22 PM Onchosim2.Wormsim showMessage
+INFO: Sun Oct 15 21:42:22 BST 2017
+Oct 15, 2017 9:42:22 PM Onchosim2.Wormsim avg
+INFO: standard output: calculating average and sd of par_set_1.57586181 thru par_set_1.57586181
+Oct 15, 2017 9:42:23 PM Onchosim2.Wormsim avg
+INFO: detailed output: calculating average and sd of par_set_1.57586181 thru par_set_1.57586181
+Oct 15, 2017 9:42:23 PM Onchosim2.Wormsim writeoutputfilestozip
+INFO: Writing par_set_157,586,181-57,586,181.zip
+Oct 15, 2018 2:43:50 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2018 2:43:50 PM Onchosim2.Wormsim showMessage
+INFO: Mon Oct 15 14:43:50 CEST 2018
+Oct 15, 2018 2:43:51 PM Onchosim2.Wormsim doOneRun
+INFO: running	template2MDA.xml	seed= 413612
+Oct 15, 2018 2:43:52 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2018 2:43:53 PM Onchosim2.Wormsim showMessage
+INFO: Mon Oct 15 14:43:53 CEST 2018
+Oct 15, 2018 2:43:53 PM Onchosim2.Wormsim avg
+INFO: standard output: calculating average and sd of template2MDA.413612 thru template2MDA.413612
+Oct 15, 2018 2:43:53 PM Onchosim2.Wormsim avg
+INFO: detailed output: calculating average and sd of template2MDA.413612 thru template2MDA.413612
+Oct 15, 2018 2:43:53 PM Onchosim2.Wormsim writeoutputfilestozip
+INFO: Writing template2MDA413,612-413,612.zip
+Oct 15, 2018 2:54:23 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2018 2:54:23 PM Onchosim2.Wormsim showMessage
+INFO: Mon Oct 15 14:54:23 CEST 2018
+Oct 15, 2018 2:54:24 PM Onchosim2.Wormsim doOneRun
+INFO: running	template2MDA.xml	seed= 413612
+Oct 15, 2018 2:54:58 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2018 2:54:58 PM Onchosim2.Wormsim showMessage
+INFO: Mon Oct 15 14:54:58 CEST 2018
+Oct 15, 2018 2:54:59 PM Onchosim2.Wormsim doOneRun
+INFO: running	template2MDA.xml	seed= 117596
+Oct 15, 2018 2:55:01 PM Onchosim2.Wormsim showMessage
+INFO: WORMSIM-2 version 2.58Ap27
+Oct 15, 2018 2:55:01 PM Onchosim2.Wormsim showMessage
+INFO: Mon Oct 15 14:55:01 CEST 2018
+Oct 15, 2018 2:55:01 PM Onchosim2.Wormsim avg
+INFO: standard output: calculating average and sd of template2MDA.117596 thru template2MDA.117596
+Oct 15, 2018 2:55:01 PM Onchosim2.Wormsim avg
+INFO: detailed output: calculating average and sd of template2MDA.117596 thru template2MDA.117596
+Oct 15, 2018 2:55:01 PM Onchosim2.Wormsim writeoutputfilestozip
+INFO: Writing template2MDA117,596-117,596.zip
