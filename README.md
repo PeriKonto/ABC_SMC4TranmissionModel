@@ -1,4 +1,4 @@
-I used the same scripts as in the toy examples on the wormsim for model testing. Use model generated data (using some pre defined transmission parameters), check if these parameter values can be recovered
+I used the same scripts as in the toy examples on the wormsim for model testing. Used synthetic data (using some pre defined transmission parameters), check if these parameter values can be recovered
 
 Description:
 
