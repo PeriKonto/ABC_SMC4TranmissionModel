@@ -4,7 +4,7 @@
 # two arguments:
 #   doc = object holding a parsed XML file, created with read.inputfile().
 #   pars = named list of parameter value(s).
-#----------------------------------------------------------------------------------WORKING
+# Peri May 2018
 # Change exposure heterogeneity (for both sexes)
   set.exposure.p1 <- function(doc, par = NULL) {
     
